@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ collection_name }}</title>
+    <style>
+        /* Your CSS styles here */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            cursor: pointer;
+        }
+        th:hover {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ collection_name }}</h1>
+    <table id="collection-table">
+        <thead>
+            <tr>
+                {% for key in data[0] %}
+                <th onclick="sortTable('{{ key }}')">{{ key }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for document in data %}
+            <tr>
+                {% for key, value in document.items() %}
+                <td>{{ value }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <script>
+        function sortTable(columnName) {
+            var table = document.getElementById("collection-table");
+            var switching = true;
+            
+            while (switching) {
+                switching = false;
+                var rows = table.rows;
+                
+                for (var i = 1; i < rows.length - 1; i++) {
+                    var shouldSwitch = false;
+                    var x = rows[i].getElementsByTagName("td")[getColumnIndex(columnName)].textContent.toLowerCase();
+                    var y = rows[i + 1].getElementsByTagName("td")[getColumnIndex(columnName)].textContent.toLowerCase();
+                    
+                    if (x.localeCompare(y) > 0) { // Use localeCompare for case-insensitive comparison
+                        shouldSwitch = true;
+                        break;
+                    }
+                }
+                
+                if (shouldSwitch) {
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                    switching = true;
+                }
+            }
+        }
+
+
+        function getColumnIndex(columnName) {
+            var table = document.getElementById("collection-table");
+            var headerRow = table.getElementsByTagName("tr")[0];
+            var headers = headerRow.getElementsByTagName("th");
+            
+            for (var i = 0; i < headers.length; i++) {
+                if (headers[i].textContent.trim() === columnName) {
+                    return i;
+                }
+            }
+            
+            return -1; // Column not found
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data from MongoDB Collection</title>
+    <style>
+        /* Your CSS styles here */
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="left-panel">
+            <h3>Available Collections</h3>
+            <ul id="collection-list">
+                {% for collection_name in collection_names %}
+                <li><a href="#" onclick="displayCollection('{{ collection_name }}')">{{ collection_name }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div id="content">
+            <!-- Content will be dynamically loaded based on selected collection -->
+        </div>
+    </div>
+    <script>
+        function displayCollection(collectionName) {
+            fetch('/collection/' + collectionName)
+                .then(response => response.text())
+                .then(data => {
+                    // Display data in content area
+                    document.getElementById('content').innerHTML = data;
+                })
+                .catch(error => console.error('Error fetching collection data:', error));
+        }
+    </script>
+</body>
+</html>
