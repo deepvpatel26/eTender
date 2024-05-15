@@ -60,7 +60,7 @@ def scrape_tender_data(city):
     options.add_argument("--headless")
     with webdriver.Chrome(options=options) as driver:
         try:
-            driver.get("https://etenders.gov.in/eprocure/app;jsessionid=27BC7A64F887FDF6F74CA97EE7DFE34A.geps1?page=FrontEndTendersByLocation&service=page")
+            driver.get("https://eprocure.gov.in/eprocure/app?page=FrontEndTendersByLocation&service=page")
 
             pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract'
             res = ''
@@ -82,7 +82,7 @@ def scrape_tender_data(city):
                     folder.click()
                     eleSelected = check_exists_by_xpath(driver, "//*[@id='content']/table/tbody/tr[2]/td/table/tbody/tr/td[2]/table/tbody/tr/td/table/tbody/tr/td/table/tbody/tr[6]/td/table/tbody/tr/td/span/b")
                     if str(eleSelected) == "True":
-                        driver.get("https://etenders.gov.in/eprocure/app;jsessionid=27BC7A64F887FDF6F74CA97EE7DFE34A.geps1?page=FrontEndTendersByLocation&service=page")
+                        driver.get("https://eprocure.gov.in/eprocure/app?page=FrontEndTendersByLocation&service=page")
                         continue
                     break
                 else:
