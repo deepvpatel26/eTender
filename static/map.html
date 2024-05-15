@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%; height: 100%; margin: 0; padding: 0;}</style>
+    <style>#map {position: absolute; top: 10%; bottom: 10%; right: 10%; left: 10%;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_276dc80d0134a2f1746ec33a7aa396a9 {
+                    position: relative;
+                    width: 80%;
+                    height: 80%;
+                    left: 10%;
+                    top: 10%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_276dc80d0134a2f1746ec33a7aa396a9" ></div>
+        
+</body>
+
+<script>
+    
+    
+            var map_276dc80d0134a2f1746ec33a7aa396a9 = L.map(
+                "map_276dc80d0134a2f1746ec33a7aa396a9",
+                {
+                    center: [22.2587, 71.1924],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 7,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_09dec31d1e84c1002168a8188913b61e = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_09dec31d1e84c1002168a8188913b61e.addTo(map_276dc80d0134a2f1746ec33a7aa396a9);
+        
+    
+            var marker_d8a853635dc91c1cd01f344149b17b1f = L.marker(
+                [23.0225, 72.5714],
+                {"parseHtml": true}
+            ).addTo(map_276dc80d0134a2f1746ec33a7aa396a9);
+        
+    
+        var popup_6d5b085b29b5ae5c3c3fe03fbcfea30f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_95138ef57b958dfd0d6773949c0243c8 = $(`<div id="html_95138ef57b958dfd0d6773949c0243c8" style="width: 100.0%; height: 100.0%;">             <div style="width: 100px;">                 <b>Ahmedabad</b><br>                 <a href="/city/Ahmedabad" style="text-decoration: none;">                     <button style="background-color: #4CAF50; /* Green */                                     border: none;                                     color: white;                                     padding: 1px 2px;                                     text-align: center;                                     text-decoration: none;                                     display: inline-block;                                     font-size: 10px;                                     margin: 4px 2px;                                     transition-duration: 0.4s;                                     cursor: pointer;                                     border-radius: 5px;                                     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">                         Detailed View                     </button>                 </a>             </div>             </div>`)[0];
+                popup_6d5b085b29b5ae5c3c3fe03fbcfea30f.setContent(html_95138ef57b958dfd0d6773949c0243c8);
+            
+        
+
+        marker_d8a853635dc91c1cd01f344149b17b1f.bindPopup(popup_6d5b085b29b5ae5c3c3fe03fbcfea30f)
+        ;
+
+        
+    
+    
+            marker_d8a853635dc91c1cd01f344149b17b1f.bindTooltip(
+                `<div>
+                     Ahmedabad<br>Open Tenders: 80<br>Closed Tenders: 40
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b475bb527934d885010f00fcb800e66c = L.marker(
+                [21.1702, 72.8311],
+                {"parseHtml": true}
+            ).addTo(map_276dc80d0134a2f1746ec33a7aa396a9);
+        
+    
+        var popup_221c6898b748e755a8630c5207ff347c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8c0ff3791e0ed252c2eb0efa31dc3200 = $(`<div id="html_8c0ff3791e0ed252c2eb0efa31dc3200" style="width: 100.0%; height: 100.0%;">             <div style="width: 100px;">                 <b>Surat</b><br>                 <a href="/city/Surat" style="text-decoration: none;">                     <button style="background-color: #4CAF50; /* Green */                                     border: none;                                     color: white;                                     padding: 1px 2px;                                     text-align: center;                                     text-decoration: none;                                     display: inline-block;                                     font-size: 10px;                                     margin: 4px 2px;                                     transition-duration: 0.4s;                                     cursor: pointer;                                     border-radius: 5px;                                     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">                         Detailed View                     </button>                 </a>             </div>             </div>`)[0];
+                popup_221c6898b748e755a8630c5207ff347c.setContent(html_8c0ff3791e0ed252c2eb0efa31dc3200);
+            
+        
+
+        marker_b475bb527934d885010f00fcb800e66c.bindPopup(popup_221c6898b748e755a8630c5207ff347c)
+        ;
+
+        
+    
+    
+            marker_b475bb527934d885010f00fcb800e66c.bindTooltip(
+                `<div>
+                     Surat<br>Open Tenders: 80<br>Closed Tenders: 25
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2f8cda82426b53da6e5352bf8e8d11ca = L.marker(
+                [22.3072, 73.1812],
+                {"parseHtml": true}
+            ).addTo(map_276dc80d0134a2f1746ec33a7aa396a9);
+        
+    
+        var popup_ae4596d32833070011989e776cfd63e9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a0b315b61c3c4a48c800c102b37c36ec = $(`<div id="html_a0b315b61c3c4a48c800c102b37c36ec" style="width: 100.0%; height: 100.0%;">             <div style="width: 100px;">                 <b>Vadodara</b><br>                 <a href="/city/Vadodara" style="text-decoration: none;">                     <button style="background-color: #4CAF50; /* Green */                                     border: none;                                     color: white;                                     padding: 1px 2px;                                     text-align: center;                                     text-decoration: none;                                     display: inline-block;                                     font-size: 10px;                                     margin: 4px 2px;                                     transition-duration: 0.4s;                                     cursor: pointer;                                     border-radius: 5px;                                     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">                         Detailed View                     </button>                 </a>             </div>             </div>`)[0];
+                popup_ae4596d32833070011989e776cfd63e9.setContent(html_a0b315b61c3c4a48c800c102b37c36ec);
+            
+        
+
+        marker_2f8cda82426b53da6e5352bf8e8d11ca.bindPopup(popup_ae4596d32833070011989e776cfd63e9)
+        ;
+
+        
+    
+    
+            marker_2f8cda82426b53da6e5352bf8e8d11ca.bindTooltip(
+                `<div>
+                     Vadodara<br>Open Tenders: 45<br>Closed Tenders: 27
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b1ac1f66b240683432625b38633953cb = L.marker(
+                [22.3039, 70.8022],
+                {"parseHtml": true}
+            ).addTo(map_276dc80d0134a2f1746ec33a7aa396a9);
+        
+    
+        var popup_e54f4ce276031c6caa3a77387f6c282e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f6228b79321d217b5afd44d6f458757c = $(`<div id="html_f6228b79321d217b5afd44d6f458757c" style="width: 100.0%; height: 100.0%;">             <div style="width: 100px;">                 <b>Rajkot</b><br>                 <a href="/city/Rajkot" style="text-decoration: none;">                     <button style="background-color: #4CAF50; /* Green */                                     border: none;                                     color: white;                                     padding: 1px 2px;                                     text-align: center;                                     text-decoration: none;                                     display: inline-block;                                     font-size: 10px;                                     margin: 4px 2px;                                     transition-duration: 0.4s;                                     cursor: pointer;                                     border-radius: 5px;                                     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">                         Detailed View                     </button>                 </a>             </div>             </div>`)[0];
+                popup_e54f4ce276031c6caa3a77387f6c282e.setContent(html_f6228b79321d217b5afd44d6f458757c);
+            
+        
+
+        marker_b1ac1f66b240683432625b38633953cb.bindPopup(popup_e54f4ce276031c6caa3a77387f6c282e)
+        ;
+
+        
+    
+    
+            marker_b1ac1f66b240683432625b38633953cb.bindTooltip(
+                `<div>
+                     Rajkot<br>Open Tenders: 30<br>Closed Tenders: 15
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0d2595bd35ba1d210728dc2d347b95af = L.marker(
+                [21.7645, 72.1519],
+                {"parseHtml": true}
+            ).addTo(map_276dc80d0134a2f1746ec33a7aa396a9);
+        
+    
+        var popup_3aefb2c89d664b5488732f779b14109f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a91aeb8868024cb2f3ca6fe3e9039d2b = $(`<div id="html_a91aeb8868024cb2f3ca6fe3e9039d2b" style="width: 100.0%; height: 100.0%;">             <div style="width: 100px;">                 <b>Bhavnagar</b><br>                 <a href="/city/Bhavnagar" style="text-decoration: none;">                     <button style="background-color: #4CAF50; /* Green */                                     border: none;                                     color: white;                                     padding: 1px 2px;                                     text-align: center;                                     text-decoration: none;                                     display: inline-block;                                     font-size: 10px;                                     margin: 4px 2px;                                     transition-duration: 0.4s;                                     cursor: pointer;                                     border-radius: 5px;                                     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">                         Detailed View                     </button>                 </a>             </div>             </div>`)[0];
+                popup_3aefb2c89d664b5488732f779b14109f.setContent(html_a91aeb8868024cb2f3ca6fe3e9039d2b);
+            
+        
+
+        marker_0d2595bd35ba1d210728dc2d347b95af.bindPopup(popup_3aefb2c89d664b5488732f779b14109f)
+        ;
+
+        
+    
+    
+            marker_0d2595bd35ba1d210728dc2d347b95af.bindTooltip(
+                `<div>
+                     Bhavnagar<br>Open Tenders: 20<br>Closed Tenders: 10
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1665f06288c9c9c0f54cb4c877c4740f = L.marker(
+                [22.4707, 70.0577],
+                {"parseHtml": true}
+            ).addTo(map_276dc80d0134a2f1746ec33a7aa396a9);
+        
+    
+        var popup_28f41122d510c79dab4dc618306e51d3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_90a3cd04cbc7c51bce311e0158d0cfb5 = $(`<div id="html_90a3cd04cbc7c51bce311e0158d0cfb5" style="width: 100.0%; height: 100.0%;">             <div style="width: 100px;">                 <b>Jamnagar</b><br>                 <a href="/city/Jamnagar" style="text-decoration: none;">                     <button style="background-color: #4CAF50; /* Green */                                     border: none;                                     color: white;                                     padding: 1px 2px;                                     text-align: center;                                     text-decoration: none;                                     display: inline-block;                                     font-size: 10px;                                     margin: 4px 2px;                                     transition-duration: 0.4s;                                     cursor: pointer;                                     border-radius: 5px;                                     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">                         Detailed View                     </button>                 </a>             </div>             </div>`)[0];
+                popup_28f41122d510c79dab4dc618306e51d3.setContent(html_90a3cd04cbc7c51bce311e0158d0cfb5);
+            
+        
+
+        marker_1665f06288c9c9c0f54cb4c877c4740f.bindPopup(popup_28f41122d510c79dab4dc618306e51d3)
+        ;
+
+        
+    
+    
+            marker_1665f06288c9c9c0f54cb4c877c4740f.bindTooltip(
+                `<div>
+                     Jamnagar<br>Open Tenders: 15<br>Closed Tenders: 8
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_168c3c73868ffb2c04b86bd840a4e588 = L.marker(
+                [19.076, 72.8777],
+                {"parseHtml": true}
+            ).addTo(map_276dc80d0134a2f1746ec33a7aa396a9);
+        
+    
+        var popup_0c70851c250e219ce2fdd6244aa72f3d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_21812f9054ace62d0372af38ee3ae76d = $(`<div id="html_21812f9054ace62d0372af38ee3ae76d" style="width: 100.0%; height: 100.0%;">             <div style="width: 100px;">                 <b>Mumbai</b><br>                 <a href="/city/Mumbai" style="text-decoration: none;">                     <button style="background-color: #4CAF50; /* Green */                                     border: none;                                     color: white;                                     padding: 1px 2px;                                     text-align: center;                                     text-decoration: none;                                     display: inline-block;                                     font-size: 10px;                                     margin: 4px 2px;                                     transition-duration: 0.4s;                                     cursor: pointer;                                     border-radius: 5px;                                     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">                         Detailed View                     </button>                 </a>             </div>             </div>`)[0];
+                popup_0c70851c250e219ce2fdd6244aa72f3d.setContent(html_21812f9054ace62d0372af38ee3ae76d);
+            
+        
+
+        marker_168c3c73868ffb2c04b86bd840a4e588.bindPopup(popup_0c70851c250e219ce2fdd6244aa72f3d)
+        ;
+
+        
+    
+    
+            marker_168c3c73868ffb2c04b86bd840a4e588.bindTooltip(
+                `<div>
+                     Mumbai<br>Open Tenders: 70<br>Closed Tenders: 35
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_055a826620dc1954cf086d757b76789c = L.marker(
+                [18.5204, 73.8567],
+                {"parseHtml": true}
+            ).addTo(map_276dc80d0134a2f1746ec33a7aa396a9);
+        
+    
+        var popup_b23dd045fbc2c19796f2c4a8eec33e2c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9037fa5db3c2e7dd8752195dbfef383a = $(`<div id="html_9037fa5db3c2e7dd8752195dbfef383a" style="width: 100.0%; height: 100.0%;">             <div style="width: 100px;">                 <b>Pune</b><br>                 <a href="/city/Pune" style="text-decoration: none;">                     <button style="background-color: #4CAF50; /* Green */                                     border: none;                                     color: white;                                     padding: 1px 2px;                                     text-align: center;                                     text-decoration: none;                                     display: inline-block;                                     font-size: 10px;                                     margin: 4px 2px;                                     transition-duration: 0.4s;                                     cursor: pointer;                                     border-radius: 5px;                                     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">                         Detailed View                     </button>                 </a>             </div>             </div>`)[0];
+                popup_b23dd045fbc2c19796f2c4a8eec33e2c.setContent(html_9037fa5db3c2e7dd8752195dbfef383a);
+            
+        
+
+        marker_055a826620dc1954cf086d757b76789c.bindPopup(popup_b23dd045fbc2c19796f2c4a8eec33e2c)
+        ;
+
+        
+    
+    
+            marker_055a826620dc1954cf086d757b76789c.bindTooltip(
+                `<div>
+                     Pune<br>Open Tenders: 60<br>Closed Tenders: 30
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9f0f4db9ae04a54571bb81a7cea8c107 = L.marker(
+                [21.1458, 79.0882],
+                {"parseHtml": true}
+            ).addTo(map_276dc80d0134a2f1746ec33a7aa396a9);
+        
+    
+        var popup_37f19403d3925fdc86193666ead2aae7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8b30bc22bf09dd1b92c39a115b11c0e5 = $(`<div id="html_8b30bc22bf09dd1b92c39a115b11c0e5" style="width: 100.0%; height: 100.0%;">             <div style="width: 100px;">                 <b>Nagpur</b><br>                 <a href="/city/Nagpur" style="text-decoration: none;">                     <button style="background-color: #4CAF50; /* Green */                                     border: none;                                     color: white;                                     padding: 1px 2px;                                     text-align: center;                                     text-decoration: none;                                     display: inline-block;                                     font-size: 10px;                                     margin: 4px 2px;                                     transition-duration: 0.4s;                                     cursor: pointer;                                     border-radius: 5px;                                     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">                         Detailed View                     </button>                 </a>             </div>             </div>`)[0];
+                popup_37f19403d3925fdc86193666ead2aae7.setContent(html_8b30bc22bf09dd1b92c39a115b11c0e5);
+            
+        
+
+        marker_9f0f4db9ae04a54571bb81a7cea8c107.bindPopup(popup_37f19403d3925fdc86193666ead2aae7)
+        ;
+
+        
+    
+    
+            marker_9f0f4db9ae04a54571bb81a7cea8c107.bindTooltip(
+                `<div>
+                     Nagpur<br>Open Tenders: 40<br>Closed Tenders: 20
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e028f031ff1c35e285d014bb9b01505d = L.marker(
+                [12.9716, 77.5946],
+                {"parseHtml": true}
+            ).addTo(map_276dc80d0134a2f1746ec33a7aa396a9);
+        
+    
+        var popup_122aff87cc591ed1b358896c09da3c74 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fc06c40598fda508fdb687b410fc96c3 = $(`<div id="html_fc06c40598fda508fdb687b410fc96c3" style="width: 100.0%; height: 100.0%;">             <div style="width: 100px;">                 <b>Bengaluru</b><br>                 <a href="/city/Bengaluru" style="text-decoration: none;">                     <button style="background-color: #4CAF50; /* Green */                                     border: none;                                     color: white;                                     padding: 1px 2px;                                     text-align: center;                                     text-decoration: none;                                     display: inline-block;                                     font-size: 10px;                                     margin: 4px 2px;                                     transition-duration: 0.4s;                                     cursor: pointer;                                     border-radius: 5px;                                     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">                         Detailed View                     </button>                 </a>             </div>             </div>`)[0];
+                popup_122aff87cc591ed1b358896c09da3c74.setContent(html_fc06c40598fda508fdb687b410fc96c3);
+            
+        
+
+        marker_e028f031ff1c35e285d014bb9b01505d.bindPopup(popup_122aff87cc591ed1b358896c09da3c74)
+        ;
+
+        
+    
+    
+            marker_e028f031ff1c35e285d014bb9b01505d.bindTooltip(
+                `<div>
+                     Bengaluru<br>Open Tenders: 75<br>Closed Tenders: 45
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_152f9e1a731414415d8fae6f8aea4bc7 = L.marker(
+                [12.2958, 76.6394],
+                {"parseHtml": true}
+            ).addTo(map_276dc80d0134a2f1746ec33a7aa396a9);
+        
+    
+        var popup_f9a93e53cd3cf590e6a1d85cbf18238d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1f817e7b8617afb1664c5c6f14c4cb8b = $(`<div id="html_1f817e7b8617afb1664c5c6f14c4cb8b" style="width: 100.0%; height: 100.0%;">             <div style="width: 100px;">                 <b>Mysore</b><br>                 <a href="/city/Mysore" style="text-decoration: none;">                     <button style="background-color: #4CAF50; /* Green */                                     border: none;                                     color: white;                                     padding: 1px 2px;                                     text-align: center;                                     text-decoration: none;                                     display: inline-block;                                     font-size: 10px;                                     margin: 4px 2px;                                     transition-duration: 0.4s;                                     cursor: pointer;                                     border-radius: 5px;                                     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">                         Detailed View                     </button>                 </a>             </div>             </div>`)[0];
+                popup_f9a93e53cd3cf590e6a1d85cbf18238d.setContent(html_1f817e7b8617afb1664c5c6f14c4cb8b);
+            
+        
+
+        marker_152f9e1a731414415d8fae6f8aea4bc7.bindPopup(popup_f9a93e53cd3cf590e6a1d85cbf18238d)
+        ;
+
+        
+    
+    
+            marker_152f9e1a731414415d8fae6f8aea4bc7.bindTooltip(
+                `<div>
+                     Mysore<br>Open Tenders: 50<br>Closed Tenders: 25
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6a2b0339b436cf278850057e2b2712c3 = L.marker(
+                [15.3647, 75.124],
+                {"parseHtml": true}
+            ).addTo(map_276dc80d0134a2f1746ec33a7aa396a9);
+        
+    
+        var popup_dcd67829294316c5bcbc449ed6399a5f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1d99e9eeec6810798362d6f58976740b = $(`<div id="html_1d99e9eeec6810798362d6f58976740b" style="width: 100.0%; height: 100.0%;">             <div style="width: 100px;">                 <b>Hubli</b><br>                 <a href="/city/Hubli" style="text-decoration: none;">                     <button style="background-color: #4CAF50; /* Green */                                     border: none;                                     color: white;                                     padding: 1px 2px;                                     text-align: center;                                     text-decoration: none;                                     display: inline-block;                                     font-size: 10px;                                     margin: 4px 2px;                                     transition-duration: 0.4s;                                     cursor: pointer;                                     border-radius: 5px;                                     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">                         Detailed View                     </button>                 </a>             </div>             </div>`)[0];
+                popup_dcd67829294316c5bcbc449ed6399a5f.setContent(html_1d99e9eeec6810798362d6f58976740b);
+            
+        
+
+        marker_6a2b0339b436cf278850057e2b2712c3.bindPopup(popup_dcd67829294316c5bcbc449ed6399a5f)
+        ;
+
+        
+    
+    
+            marker_6a2b0339b436cf278850057e2b2712c3.bindTooltip(
+                `<div>
+                     Hubli<br>Open Tenders: 35<br>Closed Tenders: 18
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_78de5188a6ba430b954eaf6191d1b2b0 = L.marker(
+                [28.7041, 77.1025],
+                {"parseHtml": true}
+            ).addTo(map_276dc80d0134a2f1746ec33a7aa396a9);
+        
+    
+        var popup_3f2589862ee1eaf26a69c79361437154 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c224d1b3da97061d53882b190e96fa91 = $(`<div id="html_c224d1b3da97061d53882b190e96fa91" style="width: 100.0%; height: 100.0%;">             <div style="width: 100px;">                 <b>Delhi</b><br>                 <a href="/city/Delhi" style="text-decoration: none;">                     <button style="background-color: #4CAF50; /* Green */                                     border: none;                                     color: white;                                     padding: 1px 2px;                                     text-align: center;                                     text-decoration: none;                                     display: inline-block;                                     font-size: 10px;                                     margin: 4px 2px;                                     transition-duration: 0.4s;                                     cursor: pointer;                                     border-radius: 5px;                                     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">                         Detailed View                     </button>                 </a>             </div>             </div>`)[0];
+                popup_3f2589862ee1eaf26a69c79361437154.setContent(html_c224d1b3da97061d53882b190e96fa91);
+            
+        
+
+        marker_78de5188a6ba430b954eaf6191d1b2b0.bindPopup(popup_3f2589862ee1eaf26a69c79361437154)
+        ;
+
+        
+    
+    
+            marker_78de5188a6ba430b954eaf6191d1b2b0.bindTooltip(
+                `<div>
+                     Delhi<br>Open Tenders: 90<br>Closed Tenders: 50
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a19d20dd78f1a8ca869e41b8889883a9 = L.marker(
+                [13.0827, 80.2707],
+                {"parseHtml": true}
+            ).addTo(map_276dc80d0134a2f1746ec33a7aa396a9);
+        
+    
+        var popup_7f94155269ddfb39fdc0a34b8cabbc23 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ff17d1780c186348531bba4037923870 = $(`<div id="html_ff17d1780c186348531bba4037923870" style="width: 100.0%; height: 100.0%;">             <div style="width: 100px;">                 <b>Chennai</b><br>                 <a href="/city/Chennai" style="text-decoration: none;">                     <button style="background-color: #4CAF50; /* Green */                                     border: none;                                     color: white;                                     padding: 1px 2px;                                     text-align: center;                                     text-decoration: none;                                     display: inline-block;                                     font-size: 10px;                                     margin: 4px 2px;                                     transition-duration: 0.4s;                                     cursor: pointer;                                     border-radius: 5px;                                     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">                         Detailed View                     </button>                 </a>             </div>             </div>`)[0];
+                popup_7f94155269ddfb39fdc0a34b8cabbc23.setContent(html_ff17d1780c186348531bba4037923870);
+            
+        
+
+        marker_a19d20dd78f1a8ca869e41b8889883a9.bindPopup(popup_7f94155269ddfb39fdc0a34b8cabbc23)
+        ;
+
+        
+    
+    
+            marker_a19d20dd78f1a8ca869e41b8889883a9.bindTooltip(
+                `<div>
+                     Chennai<br>Open Tenders: 85<br>Closed Tenders: 42
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_19c3ba72e026b248cc78572d41b175a6 = L.marker(
+                [17.385, 78.4867],
+                {"parseHtml": true}
+            ).addTo(map_276dc80d0134a2f1746ec33a7aa396a9);
+        
+    
+        var popup_7e50a43f5094c5856ab884ff6f41de92 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6d69ccfa009e2497336fb876d8c15cfb = $(`<div id="html_6d69ccfa009e2497336fb876d8c15cfb" style="width: 100.0%; height: 100.0%;">             <div style="width: 100px;">                 <b>Hyderabad</b><br>                 <a href="/city/Hyderabad" style="text-decoration: none;">                     <button style="background-color: #4CAF50; /* Green */                                     border: none;                                     color: white;                                     padding: 1px 2px;                                     text-align: center;                                     text-decoration: none;                                     display: inline-block;                                     font-size: 10px;                                     margin: 4px 2px;                                     transition-duration: 0.4s;                                     cursor: pointer;                                     border-radius: 5px;                                     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">                         Detailed View                     </button>                 </a>             </div>             </div>`)[0];
+                popup_7e50a43f5094c5856ab884ff6f41de92.setContent(html_6d69ccfa009e2497336fb876d8c15cfb);
+            
+        
+
+        marker_19c3ba72e026b248cc78572d41b175a6.bindPopup(popup_7e50a43f5094c5856ab884ff6f41de92)
+        ;
+
+        
+    
+    
+            marker_19c3ba72e026b248cc78572d41b175a6.bindTooltip(
+                `<div>
+                     Hyderabad<br>Open Tenders: 65<br>Closed Tenders: 38
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ccc26ff48eac747c7bd5552d0e28a0b2 = L.marker(
+                [22.5726, 88.3639],
+                {"parseHtml": true}
+            ).addTo(map_276dc80d0134a2f1746ec33a7aa396a9);
+        
+    
+        var popup_d633509041d18fea76f21095b2c6a764 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7bc7340140e0df1eb4238f6008f7dfa4 = $(`<div id="html_7bc7340140e0df1eb4238f6008f7dfa4" style="width: 100.0%; height: 100.0%;">             <div style="width: 100px;">                 <b>Kolkata</b><br>                 <a href="/city/Kolkata" style="text-decoration: none;">                     <button style="background-color: #4CAF50; /* Green */                                     border: none;                                     color: white;                                     padding: 1px 2px;                                     text-align: center;                                     text-decoration: none;                                     display: inline-block;                                     font-size: 10px;                                     margin: 4px 2px;                                     transition-duration: 0.4s;                                     cursor: pointer;                                     border-radius: 5px;                                     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">                         Detailed View                     </button>                 </a>             </div>             </div>`)[0];
+                popup_d633509041d18fea76f21095b2c6a764.setContent(html_7bc7340140e0df1eb4238f6008f7dfa4);
+            
+        
+
+        marker_ccc26ff48eac747c7bd5552d0e28a0b2.bindPopup(popup_d633509041d18fea76f21095b2c6a764)
+        ;
+
+        
+    
+    
+            marker_ccc26ff48eac747c7bd5552d0e28a0b2.bindTooltip(
+                `<div>
+                     Kolkata<br>Open Tenders: 70<br>Closed Tenders: 35
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1c332147bcf6060abda0efe7616588bd = L.marker(
+                [20.4283, 72.8397],
+                {"parseHtml": true}
+            ).addTo(map_276dc80d0134a2f1746ec33a7aa396a9);
+        
+    
+        var popup_061ac190c80945a4aac9c3c37bb7c5c3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2aa3687dd03d2b0a564b26255c88bba4 = $(`<div id="html_2aa3687dd03d2b0a564b26255c88bba4" style="width: 100.0%; height: 100.0%;">             <div style="width: 100px;">                 <b>Daman and Diu</b><br>                 <a href="/city/Daman%20and%20Diu" style="text-decoration: none;">                     <button style="background-color: #4CAF50; /* Green */                                     border: none;                                     color: white;                                     padding: 1px 2px;                                     text-align: center;                                     text-decoration: none;                                     display: inline-block;                                     font-size: 10px;                                     margin: 4px 2px;                                     transition-duration: 0.4s;                                     cursor: pointer;                                     border-radius: 5px;                                     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">                         Detailed View                     </button>                 </a>             </div>             </div>`)[0];
+                popup_061ac190c80945a4aac9c3c37bb7c5c3.setContent(html_2aa3687dd03d2b0a564b26255c88bba4);
+            
+        
+
+        marker_1c332147bcf6060abda0efe7616588bd.bindPopup(popup_061ac190c80945a4aac9c3c37bb7c5c3)
+        ;
+
+        
+    
+    
+            marker_1c332147bcf6060abda0efe7616588bd.bindTooltip(
+                `<div>
+                     Daman and Diu<br>Open Tenders: 25<br>Closed Tenders: 12
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
