@@ -106,12 +106,15 @@ def scrape_tender_data(city):
             if 'Title and Ref.No./Tender ID' in df:
                 df['Tender_ID'] = df['Title and Ref.No./Tender ID'].str.split('[').str[-1]
                 df['Tender_ID'] = df['Tender_ID'].str.replace(']', '')
+            if df.empty:
+                df = pd.DataFrame(columns=['S.No', 'e-Published Date', 'Closing Date', 'Opening Date', 'Title and Ref.No./Tender ID', 'Organisation Chain', 'Tender_ID'])
             return df
 
         except Exception as e:
             print("An error occurred:", e)
             #return empty dataframe with columns [S.No,e-Published Date,Closing Date,Opening Date,Title and Ref.No./Tender ID,Organisation Chain,Tender_ID]
             return pd.DataFrame(columns=['S.No', 'e-Published Date', 'Closing Date', 'Opening Date', 'Title and Ref.No./Tender ID', 'Organisation Chain', 'Tender_ID'])
+
 # Example usage:
 # city = 'Rajkot'
 # tender_data = scrape_tender_data(city)

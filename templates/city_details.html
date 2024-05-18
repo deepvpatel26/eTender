@@ -126,23 +126,32 @@
             <button id="reload-button" type="submit"><i class="fas fa-sync"></i> Refresh Data</button>
             <div id="loader" class="loader"></div>
             <span id="loading-message" class="loading-message">Your data is being scrapped please wait...</span>
+            <p id="no-new-records" style="display: none; color: #FF5733; font-weight: bold; margin-top: 10px;">No new records to insert</p>
         </form>
         <table>
             <tr>
                 {% if data %}
                 {% for key in data[0] %}
+                {% if key not in ['_id', 'S.No', 'Tender_ID'] %}
                 <th>{{ key }}</th>
+                {% endif %}
                 {% endfor %}
+                <th>Download PDF</th>
+                <th>View More</th>
                 {% else %}
-                <th colspan="7">No records found</th>
+                <th colspan="5">No records found</th>
                 {% endif %}
             </tr>
             {% if data %}
             {% for record in data %}
             <tr>
-                {% for value in record.values() %}
+                {% for key, value in record.items() %}
+                {% if key not in ['_id', 'S.No', 'Tender_ID'] %}
                 <td>{{ value }}</td>
+                {% endif %}
                 {% endfor %}
+                <td><a href="/download_pdf?city={{ city_name }}&id={{ record['Title and Ref.No./Tender ID'] }}">Download PDF</a></td>
+                <td><a href="/view_more/{{ record['_id'] }}">View More</a></td>
             </tr>
             {% endfor %}
             {% endif %}
@@ -150,10 +159,36 @@
     </div>
 
     <script>
-        document.getElementById('reload-form').addEventListener('submit', function () {
+        document.getElementById('reload-form').addEventListener('submit', function (event) {
             document.getElementById('reload-button').style.display = 'none';
             document.getElementById('loader').style.display = 'inline-block';
             document.getElementById('loading-message').style.display = 'inline';
+            document.getElementById('no-new-records').style.display = 'none'; // Hide the message initially
+
+            // Prevent the default form submission
+            event.preventDefault();
+
+            // Fetch the form action URL
+            var formAction = this.action;
+
+            // Send a POST request to the form action URL
+            fetch(formAction, {
+                method: 'POST'
+            })
+                .then(response => response.text())
+                .then(data => {
+                    // Hide loading spinner
+                    document.getElementById('loader').style.display = 'none';
+                    document.getElementById('loading-message').style.display = 'none';
+
+                    // If the response contains "No new records to insert", show the message
+                    if (data.includes('No new records to insert')) {
+                        document.getElementById('no-new-records').style.display = 'block';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
         });
     </script>
 </body>
